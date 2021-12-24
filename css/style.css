@@ -1,22 +1,29 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 
 }
 
 body {
-  min-height: 100vh;
-  max-width: 1300px;
+  /* min-height: 100vh; */
+  max-width: 100vw;
   background-image: linear-gradient(to right, rgb(138, 138, 253), #beebe1); 
   display: flex; 
   flex-wrap: wrap;
+   /* more info about flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+   /* wrap moves stuff to the next line if it does not fit */
   justify-content: space-evenly; 
+  cursor: url('../Photo/cursor.png'), auto;	
+  /* need to use two . to link to my folder */
+  /* used online pic converter jpg to png transparent */
+  /* then used some png resizer to make it tiny (didn't work without!) */
 }
 
 nav {
 width: 15vw;
-
+/* I will use the nav to play the video with the head looking up and down, depending on where the mouse is */
 }
 
 main {
@@ -27,10 +34,10 @@ main {
   background-color: white;
   border: 1px solid lightgray;
   display: inline-block;
-  width: 500px;
+  max-width: 30vw;
   border-radius: 15px;
-  min-height: 1000px;
-  margin-top: 5vw;
+  min-height: 100vh;
+  margin-top: 1vw;
   margin-left: 25vw;
   box-shadow: 5px 10px 18px black;
   transition: 0.15s ease-in-out;
@@ -42,11 +49,13 @@ main {
   box-shadow: 5px 10px 18px rgb(47, 0, 255);
 }
 
-.profile img {
+
+
+/* .profile img {
 width: 490px; 
 margin: 3px;
 align-items: center;
-}
+} */
 
 #name {
    font-size: 20px;
@@ -75,6 +84,7 @@ height: 5vh;
 
 i {
   margin-left: 1vw;
+  /* this is the location icon from the web */
 }
 
 .icons {
@@ -128,3 +138,71 @@ font-size: 1.5rem;
   color: rgb(21, 243, 21);
 }
 
+.hovert {
+  display: flex; 
+  /* need to add above flex or it does not work!  */
+  /* more info about flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  height: 5vh; 
+  width: 40vw; 
+}
+
+#hovertext {
+  height: 5vh; 
+  width: 8vw; 
+  padding: 5px;
+  margin-left: 0;
+  font-size: 18px;
+  text-align: left;
+  color: red;
+  }
+
+  #hovertext2 {
+    height: 5vh; 
+    width: 30vw; 
+    padding: 5px;
+    margin-right: 0;
+    font-size: 18px;
+    text-align: left;
+    color: blue;
+    position: sticky;
+    }
+
+
+    
+/* below is from YouTube #Onclick Image Preview _ Simple Image Slider using Javascript _ 2021 tutorial. */
+.img-preview {
+ width: 28vw;
+  margin: 1vw; 
+  align-items: center;
+}
+
+.images {
+  transform: translateY(-150%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 2vw;
+  margin: 5px;
+  opacity: 0.6;
+  cursor: pointer;
+  border: 4px solid white;
+  transition: all 0.25s ease-in-out;
+}
+
+.img:hover {
+  width: 3vw;
+  opacity: 1;
+}
+
+.thetext {
+    transform: translateY(-10%);
+}
+
+/* also add resizing depending on your screen size. view on phone too?  */
+
+/* create small circles at the bottom of the pic to show how many pics there are */
+/* also, when clicking on the circle, opens each pic */

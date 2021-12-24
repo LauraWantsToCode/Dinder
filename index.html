@@ -11,30 +11,52 @@
   <body>
 
 <nav>
-<!-- add the moving head video here to the side - might need to swap with main and be on the right -->
+<!-- <div class="videocontainer">
+  <video id="video" src="./Photo/Video/UpDown2.gif"></video>
+   !!!!!!!!!!!!!!!! need to add mp4 file above!
+   
+</div> -->
 </nav>
 
 
 <main>
 <div class="profile">
 
-   
-<img src="./Photo/Profile pic.png" alt="">
+   <!-- below is Youtube: #Onclick Image Preview _ Simple Image Slider using Javascript _ 2021 tutorial. -->
+<img src="./Photo/Profilepic.png" alt="" class="img-preview" id="img-preview">
+<figure class="images">
+    <img onclick="IMGsrc('./Photo/Profilepic.png')" src="./Photo/Profilepic.png" alt="" class="img">
+    <img onclick="IMGsrc('./Photo/Playfulchap.png')" src="./Photo/Playfulchap.png" alt="" class="img">
+    <img onclick="IMGsrc('./Photo/posing.png')" src="./Photo/posing.png" alt="" class="img">
+    <img onclick="IMGsrc('./Photo/fish.png')" src="./Photo/fish.png" alt="" class="img">
+    <img onclick="IMGsrc('./Photo/putmedown.png')" src="./Photo/putmedown.png" alt="" class="img">
+    <img onclick="IMGsrc('./Photo/thefeels.png')" src="./Photo/thefeels.png" alt="" class="img">
+</figure>
+<script>
+  function IMGsrc(source) {
+    document.getElementById('img-preview').src = source
+  }
+</script>
 
-
-<br>
+<div class="thetext">
 <span id="name">Coffee</span> <span>4</span>
 <br>
 <i class="fas fa-map-marker-alt"></i>
 <span id="location"></i>0 miles away from your heart </span>
-<br><br>
 
+<div class="hovert"> 
+  <!-- to put all 3 hover texts into one line, it is easier to put all into 1 div -->
+  <!-- i needed different colours for the hover text so had to split -->
+<div id="hovertext" ></div>
+<div id="hovertext2" ></div> </div>
 <span class="icons">
-  <a href="#" id="x"> <i class="fas fa-times"></i></a>
-  <a href="#" id="superlike"> <i class="fas fa-star"></i></a>
-  <a href="#" id="heart"> <i class="fas fa-heart"></i></a>
+  <a href="#" onclick="funcX()" onmouseover="Show1()" onmouseout="Hide1()" id="x" > <i class="fas fa-times"></i></a>
+  <a href="#" onclick="funcSuper()" onmouseover="Show2()" onmouseout="Hide2()" id="superlike"> <i class="fas fa-star"></i></a>
+  <a href="#" onclick="funcHeart()" onmouseover="Show3()" onmouseout="Hide3()" id="heart"> <i class="fas fa-heart"></i></a>
 </span>
 
+
+<br><br>
     <div class="ProfileDetails">
 <p>
   I enjoy long walks on the beach. <br>
@@ -52,6 +74,7 @@
 
   <!-- use span for hearts etc -->
     </div>
+</div>
 </div>
 </main>
     <script src="./js/app.js"></script>

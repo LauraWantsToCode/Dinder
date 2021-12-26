@@ -10,12 +10,6 @@
   </head>
   <body>
 
-<nav>
-<div class="videocontainer">
-     <video id="video" src="./Photo/Video/jumpster_6PPVK4xY.mp4"></video>
-</div> 
-</nav>
-
 
 <main>
 <div class="profile">
@@ -35,20 +29,6 @@
     <img onclick="IMGsrc('./Photo/trip4.png')" src="./Photo/trip4.png" alt="" class="img">
     <img onclick="IMGsrc('./Photo/trip5.png')" src="./Photo/trip5.png" alt="" class="img">
 </figure>
-
-
-<script>
-    // 
-  // function scrollVideo(){
-  //   var video=$('video').get(0); 
-  //   videoLength = video.duration(); 
-  //   scrollPosition = $(document).scrollTop(); 
-  //   video.currentTime=(scrollPosition/($(document).height()-$(window).height())*videoLength); 
-  //   $(window).scroll(function(e){
-  //     scrollVideo(); 
-  //   })
-  // }
-</script>
 
 
 <div class="thetext">
@@ -90,6 +70,19 @@
 </div>
 </div>
 </main>
+
+<nav>
+  <a href="#"  id="BtnUp"> <i class="fas fa-arrow-alt-circle-up"></i></a>
+</nav>
+
+    <!--   <video src="./Photo/Video/Cofvideo.mp4" id="video" autoplay controls></video> -->
+       <!-- after id, can type "autoplay controls" -->
+       <!-- decide if I want the video to autoplay or not - remove "autoplay" if not -->
+       <!-- same with controls - just add this word for it (fastforward, stop, etc) -->
+  
+
+
+
     <script src="./js/app.js"></script>
   </body>
 </html>

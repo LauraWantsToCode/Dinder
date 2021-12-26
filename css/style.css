@@ -17,19 +17,7 @@ body {
   
 }
 
-body nav {
-width: 17vw;
-cursor: url('../Photo/cursor.png'), auto;	
-  /* need to use two . to link to my folder */
-  /* used online pic converter jpg to png transparent */
-  /* then used some png resizer to make it tiny (didn't work without!) */
-}
-
-#video {
-  max-width: 14vw;
-  margin: 1vw;
-  margin-top: 10vw; 
-  position: fixed;
+  /* position: fixed; */
   /* fixed position keeps your item in the same place on the screen, even when scrolling the page! */
   
   /* z-index: 1; */
@@ -59,10 +47,9 @@ cursor: url('../Photo/cursor.png'), auto;
 
   */
 
-}
 
 body main {
-  width: 75vw;
+  width: 80vw;
 }
 
 .profile {
@@ -73,7 +60,7 @@ body main {
   border-radius: 15px;
   min-height: 95vh;
   margin-top: 1vw;
-  margin-left: 20vw;
+  margin-left: 33vw;
   box-shadow: 5px 10px 18px black;
   transition: 0.15s ease-in-out;
   padding: 10px 0px;
@@ -117,6 +104,7 @@ border-radius: 50%;
 padding: 5px;
 transition: 0.15s ease-in-out;
 color: red;
+font-size: 1.5rem;
 }
 
 #Youtube:hover {
@@ -240,7 +228,34 @@ font-size: 1.5rem;
     transform: translateY(-10%);
 }
 
-/* also add resizing depending on your screen size. view on phone too?  */
 
-/* create small circles at the bottom of the pic to show how many pics there are */
-/* also, when clicking on the circle, opens each pic */
+body nav {
+  width: 17vw;
+  cursor: url('../Photo/cursor.png'), auto;	
+    /* need to use two . to link to my folder */
+    /* used online pic converter jpg to png transparent */
+    /* then used some png resizer to make it tiny (didn't work without!) */
+
+  }
+
+#BtnUp {
+  color:rgb(140, 140, 150); 
+  font-size: 2rem;
+  /* use rem to resize font-awesome!  */
+  position: fixed; 
+  /* above means it 'floats' above all other content */
+  right: 10px;
+  bottom: 10px;
+}
+
+#BtnUp:active {
+  color:rgb(75, 75, 230); 
+}
+
+
+
+
+
+
+/* also add resizing depending on your screen size. view on phone too?  */
+/* two languages - LT, EN */

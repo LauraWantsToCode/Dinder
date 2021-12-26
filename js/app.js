@@ -38,3 +38,7 @@ function Show3() {
 function Hide3() {
     document.getElementById("hovertext2").innerHTML=" ";
 }
+
+function IMGsrc(source) {
+    document.getElementById('img-preview').src = source;
+  }

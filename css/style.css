@@ -7,27 +7,62 @@
 }
 
 body {
-  /* min-height: 100vh; */
   max-width: 100vw;
   background-image: linear-gradient(to right, rgb(138, 138, 253), #beebe1); 
   display: flex; 
   flex-wrap: wrap;
    /* more info about flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
    /* wrap moves stuff to the next line if it does not fit */
-  justify-content: space-evenly; 
-  cursor: url('../Photo/cursor.png'), auto;	
+  /* justify-content: space-evenly;     - deleted this, otherwise objects 'center', and not 'fit' with each other */
+  
+}
+
+body nav {
+width: 17vw;
+cursor: url('../Photo/cursor.png'), auto;	
   /* need to use two . to link to my folder */
   /* used online pic converter jpg to png transparent */
   /* then used some png resizer to make it tiny (didn't work without!) */
 }
 
-nav {
-width: 15vw;
-/* I will use the nav to play the video with the head looking up and down, depending on where the mouse is */
+#video {
+  max-width: 14vw;
+  margin: 1vw;
+  margin-top: 10vw; 
+  position: fixed;
+  /* fixed position keeps your item in the same place on the screen, even when scrolling the page! */
+  
+  /* z-index: 1; */
+  /* z index is used to displace elements on the z-axis. in or out of screen 
+  it is used to define the order of elements if they overlap on each other. 
+  'which element appears on top. if z-index 999, the 1000 would appear on top. 
+  I think in the youtube video, they used this to add text on top of the video - I don't need it */
+  /* z-index can help position items on the page - as long as they are in the
+  absolute position, rather than static. Potentially, can use this instead of div's. */
+
+  /* transform: translate(-50%, -50%);   THIS was used in the initial video */
+  /* transform functions explained: https://www.youtube.com/watch?v=rzD-cPhq02E
+    transform functions:
+    - rotate function (can be simple, 3d, x, y or z axis - 
+    in () can add degrees (90deg), turns(0.25turn) -> this would be 90 degrees, etc. 
+    on x axis - top is getting further, bottom is getting closer. it is rotating away from us. 
+    on y axis - the item rotates from left to right, so gets 'skinnier'. 
+    - scale. allows us to make an object smaller or larger. 
+    - translate function. allows to move the object up/down, left/right, back/forth (for z). 
+    when you add 1 value to translate, it is exactly as translateX. 
+    first value is X, second Y. 
+    100% - moves the item by it's width. 
+    when adding -50%, moves half of the width to the left (or up). 
+    helps with centering. 
+    - skew. used to stretch out the shape. by degrees. 
+
+
+  */
+
 }
 
-main {
-  width: 85vw;
+body main {
+  width: 75vw;
 }
 
 .profile {
@@ -36,9 +71,9 @@ main {
   display: inline-block;
   max-width: 30vw;
   border-radius: 15px;
-  min-height: 100vh;
+  min-height: 95vh;
   margin-top: 1vw;
-  margin-left: 25vw;
+  margin-left: 20vw;
   box-shadow: 5px 10px 18px black;
   transition: 0.15s ease-in-out;
   padding: 10px 0px;
@@ -77,9 +112,15 @@ span {
 margin: 1vw;
 }
 
-#youtube {
-height: 5vh; 
+.ProfileDetails #Youtube {
+border-radius: 50%;
+padding: 5px;
+transition: 0.15s ease-in-out;
+color: red;
+}
 
+#Youtube:hover {
+  box-shadow: 5px 10px 18px #888888;
 }
 
 i {
@@ -121,19 +162,16 @@ font-size: 1.5rem;
 }
 
 #x:hover {
-  transform: scale(1);
   box-shadow: 5px 10px 18px #888888;
   color: gray;
 }
 
 #superlike:hover {
-  transform: scale(1.02);
   box-shadow: 5px 10px 18px #888888;
   color: rgb(67, 209, 252);
 }
 
 #heart:hover {
-  transform: scale(1.02);
   box-shadow: 5px 10px 18px #888888;
   color: rgb(21, 243, 21);
 }

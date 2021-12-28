@@ -225,7 +225,7 @@ font-size: 1.5rem;
 }
 
 .thetext {
-    transform: translateY(-10%);
+    transform: translateY(-2%);
 }
 
 
@@ -235,17 +235,17 @@ body nav {
     /* need to use two . to link to my folder */
     /* used online pic converter jpg to png transparent */
     /* then used some png resizer to make it tiny (didn't work without!) */
-
   }
 
 #BtnUp {
-  color:rgb(140, 140, 150); 
-  font-size: 2rem;
-  /* use rem to resize font-awesome!  */
+
   position: fixed; 
   /* above means it 'floats' above all other content */
   right: 10px;
   bottom: 10px;
+  color:white; 
+  font-size: 2rem;
+  /* use rem to resize font-awesome!  */
 }
 
 #BtnUp:active {
@@ -253,6 +253,45 @@ body nav {
 }
 
 
+.container{
+position: relative;
+width: 28vw; 
+
+/* overflow: hidden;  */
+/* overflow hidden - hides any items that are flexed (display:flex) and move out of the added size */
+}
+
+.slides { 
+  /* display: none; */
+  z-index: 9;
+  /* display: flex;  */
+  /* display flex put all images next to each other, so from left to right, all in one line
+   - would work great for a carousel */
+   /* position: relative; */
+}
+
+#prevBtn, 
+#nextBtn {
+  z-index: 10;
+  cursor: pointer;
+  position: absolute;
+  user-select: none;
+  -webkit-user-select: none;
+  transform: translateY(7vw);
+  color: white; 
+  font-size: 2rem;
+  /* use rem to resize font-awesome!  */
+}
+
+#nextBtn {
+  right: 2vw;
+}
+
+#prevBtn:hover, 
+#nextBtn:hover {
+  background-color: rgba(66, 65, 65, 0.8);
+  /* above adds gray with a bit of seethrough */
+}
 
 
 

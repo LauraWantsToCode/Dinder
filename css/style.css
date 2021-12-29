@@ -118,11 +118,11 @@ i {
 
 .icons {
 font-size: 1.5rem;
-  
+float: left;
+margin-top: 5px;
 }
 
 .icons #x{
-  margin-top: 15px;
   margin-right: 20px;
   border-radius: 50%;
   padding: 10px;
@@ -131,7 +131,6 @@ font-size: 1.5rem;
 }
 
 .icons #superlike{
-  margin-top: 15px;
   margin-right: 20px;
   border-radius: 50%;
   padding: 10px;
@@ -141,7 +140,6 @@ font-size: 1.5rem;
 
 
 .icons #heart{
-  margin-top: 15px;
   margin-right: 20px;
   border-radius: 50%;
   padding: 10px;
@@ -193,6 +191,14 @@ font-size: 1.5rem;
     position: sticky;
     }
 
+#calculation {
+  height: 5vh;
+  width: 4.5vw;
+  font-size: 14px; 
+  float: right;
+  margin-right: 5vw;
+  color: rgb(100, 100, 177);
+}
 
     
 /* below is from YouTube #Onclick Image Preview _ Simple Image Slider using Javascript _ 2021 tutorial. */
@@ -295,6 +301,15 @@ width: 28vw;
 
 
 
+
+.hideItem {
+	display: none;
+  z-index: 2;
+}
+
+#video0 {
+  z-index: 1;
+}
 
 /* also add resizing depending on your screen size. view on phone too?  */
 /* two languages - LT, EN */

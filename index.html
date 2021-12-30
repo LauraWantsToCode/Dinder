@@ -12,116 +12,133 @@
 
 
 <main>
-<div class="profile">
-   <!-- below is Youtube: #Onclick Image Preview _ Simple Image Slider using Javascript _ 2021 tutorial. -->
-   <img src="./Photo/Profilepic.png" alt="" class="img-preview" id="img-preview">
+
+  <div class="profile">
+  <!-- below is Youtube: #Onclick Image Preview _ Simple Image Slider using Javascript _ 2021 tutorial. -->
+  <img src="./Photo/Profilepic.png" alt="" class="img-preview" id="img-preview">
 <figure class="images">
-    <img onclick="IMGsrc('./Photo/Profilepic.png')" src="./Photo/Profilepic.png" alt="" class="img">
-    <img onclick="IMGsrc('./Photo/trip1.png')" src="./Photo/trip1.png" alt="" class="img">
-    <img onclick="IMGsrc('./Photo/Playfulchap.png')" src="./Photo/Playfulchap.png" alt="" class="img">
-    <img onclick="IMGsrc('./Photo/trip2.png')" src="./Photo/trip2.png" alt="" class="img">
-    <img onclick="IMGsrc('./Photo/posing.png')" src="./Photo/posing.png" alt="" class="img">
-    <img onclick="IMGsrc('./Photo/fish.png')" src="./Photo/fish.png" alt="" class="img">
-    <!-- <img onclick="IMGsrc('./Photo/putmedown.png')" src="./Photo/putmedown.png" alt="" class="img"> -->
-    <img onclick="IMGsrc('./Photo/thefeels.png')" src="./Photo/thefeels.png" alt="" class="img">
-    <img onclick="IMGsrc('./Photo/trip3.png')" src="./Photo/trip3.png" alt="" class="img">
-    <img onclick="IMGsrc('./Photo/trip4.png')" src="./Photo/trip4.png" alt="" class="img">
-    <img onclick="IMGsrc('./Photo/trip5.png')" src="./Photo/trip5.png" alt="" class="img">
+   <img onclick="IMGsrc('./Photo/Profilepic.png')" src="./Photo/Profilepic.png" alt="" class="img">
+   <img onclick="IMGsrc('./Photo/trip1.png')" src="./Photo/trip1.png" alt="" class="img">
+   <img onclick="IMGsrc('./Photo/Playfulchap.png')" src="./Photo/Playfulchap.png" alt="" class="img">
+   <img onclick="IMGsrc('./Photo/trip2.png')" src="./Photo/trip2.png" alt="" class="img">
+   <img onclick="IMGsrc('./Photo/posing.png')" src="./Photo/posing.png" alt="" class="img">
+   <img onclick="IMGsrc('./Photo/fish.png')" src="./Photo/fish.png" alt="" class="img">
+   <!-- <img onclick="IMGsrc('./Photo/putmedown.png')" src="./Photo/putmedown.png" alt="" class="img"> -->
+   <img onclick="IMGsrc('./Photo/thefeels.png')" src="./Photo/thefeels.png" alt="" class="img">
+   <img onclick="IMGsrc('./Photo/trip3.png')" src="./Photo/trip3.png" alt="" class="img">
+   <img onclick="IMGsrc('./Photo/trip4.png')" src="./Photo/trip4.png" alt="" class="img">
+   <img onclick="IMGsrc('./Photo/trip5.png')" src="./Photo/trip5.png" alt="" class="img">
 </figure>
 
-
 <div class="thetext">
-<span id="name">Coffee</span> <span>4</span>
-<br>
-<i class="fas fa-map-marker-alt"></i>
-<span id="location"></i>0 miles away from your heart </span>
-
-
-<div class="hovert"> 
-  <!-- to put all 3 hover texts into one line, it is easier to put all into 1 div -->
-  <!-- i needed different colours for the hover text so had to split -->
-<div id="hovertext" ></div>
-<div id="hovertext2" ></div> </div>
+  <span id="name">Coffee</span> <span>4</span>
+  <br>
+  <i class="fas fa-map-marker-alt"></i>
+  <span id="location"></i>0 miles away from your heart </span>
+  
+  <div class="hovert"> 
+    <!-- to put all 3 hover texts into one line, it is easier to put all into 1 div -->
+    <!-- i needed different colours for the hover text so had to split -->
+  <div id="hovertext" ></div>
+  <div id="hovertext2" ></div> </div>
+  
 <span class="icons">
-  <a href="#!" onclick="funcX()" onmouseover="Show1()" onmouseout="Hide1()" id="x" > <i class="fas fa-times"></i></a>
-  <a href="#!" onclick="funcSuper()" onmouseover="Show2()" onmouseout="Hide2()" id="superlike"> <i class="fas fa-star"></i></a>
-  <a href="#!" onclick="funcHeart()" onmouseover="Show3()" onmouseout="Hide3()" id="heart"> <i class="fas fa-heart"></i></a>
- <!-- #! is used to stop the page from scrolling up when the button is clicked!  -->
+  <!-- initially used <a> instead of buttons. a has href="" included in it, so refreshes the page -->
+    <!-- this was causing issues with JS functions. Use buttons! -->
+
+<!-- can also add title="" for the text that would be visible on hover (just not styled) -->
+  <button onclick="funcX()" onmouseover="Show1()" onmouseout="Hide1()" id="x"> <i class="fas fa-times"></i></button>
+  <button onclick="funcSuper()" onmouseover="Show2()" onmouseout="Hide2()" id="superlike"> <i class="fas fa-star"></i></button>
+  <button onclick="funcHeart()" onmouseover="Show3()" onmouseout="Hide3()" id="heart"> <i class="fas fa-heart"></i></button>
+  <!-- previously had <a> instead of a button -->
+ <!-- a href=”#!” is used to stop the page from scrolling up (refreshing?) when the button is clicked!  -->
 <!-- however! This will still add an entry to the browser's history when clicked, meaning that after clicking your link, the user's back button will not take them to the page they were previously on.  -->
+
+
 </span>
  <aside id="calculation">
+   <table>
+     <tr>
+       <th></th>
+       <th></th>
+     </tr>
+
   <tr>
-    <th>Superlikes: </th>
+    <td>Superlikes: </td>
     <td id="superCalc">0</td>
   </tr>
   <tr>
-    <th>Likes: </th>
+    <td>Likes: </td>
     <td id="heartCalc">0</td>
   </tr>
   <tr>
-    <th>Dislikes: </th>
+    <td>Dislikes: </td>
     <td id="disCalc">0</td>
   </tr>
-
+</table>
  </aside>
 
-<br><br>
-    <div class="ProfileDetails">
+
+ <br><br><br>
+ <div class="ProfileDetails">
 <p>
-  I enjoy long walks on the beach. <br>
-  I am a foodie - I would eat anything. Literally. Anything. Please give me snacks. <br>
-  I love to play ball. <br>
-  I am looking for single cats in the area. <br> 
-  Or squirrels. <br>
-  <br>
-  I have been told I am the goodest boy in the world. Also the averagest. Depends on the day. 
-  <br> <br>
-  Please meet me and give me snacks! <br><br>
- </p>
+I enjoy long walks on the beach. <br>
+I am a foodie - I would eat anything. Literally. Anything. Please give me snacks. <br>
+I love to play ball. <br>
+I am looking for single cats in the area. <br> 
+Or squirrels. <br>
+<br>
+I have been told I am the goodest boy in the world. Also the averagest. Depends on the day. 
+<br> <br>
+Please meet me and give me snacks! <br><br>
+</p>
 
-    <div class="container">
+ <div class="container">
 
-      <a href="#!" class="button" id="prevBtn"> <i class="fas fa-arrow-circle-left"></i></a>
-      <a href="#!" class="button" id="nextBtn"> <i class="fas fa-arrow-circle-right"></i></a>
+   <button class="button" id="prevBtn"> <i class="fas fa-arrow-circle-left"></i></button>
+   <button class="button" id="nextBtn"> <i class="fas fa-arrow-circle-right"></i></button>
 
-      <div  id="video0">
-        <div class="numbertext">1 / 3</div> 
-        <!-- this video is created to always be shown, but z-index to not be seen when others are clicked -->
-        <!-- basically, only required for page opening -->
-        <video src="./Photo/Video/video1.mp4" controls style="width: 28vw;" ></video>
-          <!-- after id, can type "autoplay controls" -->
-       <!-- decide if I want the video to autoplay or not - remove "autoplay" if not -->
-       <!-- same with controls - just add this word for it (fastforward, stop, etc) -->
-      </div>
 
-      <div class="slides hideItem" id="video1">
-        <div class="numbertext">1 / 3</div>
-        <video src="./Photo/Video/video1.mp4" controls style="width: 28vw;" ></video>
-      </div>
-    
-      <div class="slides hideItem" id="video2">
-        <div class="numbertext">2 / 3</div>
-        <video src="./Photo/Video/video2.mp4" controls style="width: 28vw;" ></video>
-      </div>
+   <div id="video0">
+    <div class="numbertext">1 / 3</div> 
+    <!-- this video is created to always be shown, but z-index to not be seen when others are clicked -->
+    <!-- basically, only required for page opening -->
+    <video src="./Photo/Video/video1.mp4" controls style="width: 28vw;" ></video>
+      <!-- after id, can type "autoplay controls" -->
+   <!-- decide if I want the video to autoplay or not - remove "autoplay" if not -->
+   <!-- same with controls - just add this word for it (fastforward, stop, etc) -->
+  </div>
 
-      <div class="slides hideItem" id="Video3">
-        <div class="numbertext">3 / 3</div>
-        <video src="./Photo/Video/Video3.mp4" controls style="width: 28vw;" ></video>
-      </div> 
+  <div class="slides hideItem" id="video1">
+    <div class="numbertext">1 / 3</div>
+    <video src="./Photo/Video/video1.mp4" controls style="width: 28vw;" ></video>
+  </div>
 
-    <p>
-  For more love, you can find me on Youtube. 
-  <a href="https://www.youtube.com/user/nesimaivo/videos" target="_blank" id="Youtube"> <i class="fab fa-youtube"></i></a>
- </p>
+  <div class="slides hideItem" id="video2">
+    <div class="numbertext">2 / 3</div>
+    <video src="./Photo/Video/video2.mp4" controls style="width: 28vw;" ></video>
+  </div>
 
-  <!-- use span for hearts etc -->
-    </div>
+  <div class="slides hideItem" id="Video3">
+    <div class="numbertext">3 / 3</div>
+    <video src="./Photo/Video/Video3.mp4" controls style="width: 28vw;" ></video>
+  </div> 
+
+  </div>
+
+   <p>
+    For more love, you can find me on Youtube. 
+    <a href="https://www.youtube.com/user/nesimaivo/videos" target="_blank" id="Youtube"> <i class="fab fa-youtube"></i></a>
+   </p>
+  
+
+  </div>
 </div>
-</div>
+
 </main>
-
 <nav>
-  <a href="#!" class="button" id="BtnUp"> <i class="fas fa-arrow-alt-circle-up"></i></a>
+  <a href="#" id="BtnUp"> <i class="fas fa-arrow-alt-circle-up"></i></a>
+  <!-- a href above scrolls to top, so a button and function is not required. -->
 </nav>
 
    <script src="./js/app.js"></script>

@@ -1,33 +1,30 @@
 
+// ============================================
+// profile images and little thumbnails 
+
+function IMGsrc(source) {
+    document.getElementById('img-preview').src = source;
+  }
+
+
+// ============================================
+// Calculating dislikes, likes, superlikes: 
+
 var valueX = 0;
-
 function funcX() {
-    document.getElementById('disCalc').value = ++valueX;
-    console.log(valueX)
-}
+    document.getElementById('disCalc').innerHTML = ++valueX;
+    }
 
+
+var valueSuper = 0   
 function funcSuper() {
-    var element2 = document.getElementById('superCalc');
-    var valueSuper = element2.innerHTML; 
-
-    ++valueSuper; 
-
-    console.log(valueSuper);
-    document.getElementById('superCalc').innerHTML = valueSuper;
+    document.getElementById('superCalc').innerHTML = ++valueSuper;
 }
 
-
+var valueHeart = 0   
 function funcHeart() {
-    var element3 = document.getElementById('heartCalc');
-    var valueH = element3.innerHTML; 
-
-    ++valueH; 
-
-    console.log(valueH);
-    document.getElementById('heartCalc').innerHTML = valueH;
+    document.getElementById('heartCalc').innerHTML = ++valueHeart;
 }
-
-
 
 // ============================================
 // prints text on-hover above x, superlike, heart
@@ -53,23 +50,10 @@ function Hide3() {
     document.getElementById("hovertext2").innerHTML=" ";
 }
 
-// ============================================
-// profile images and little thumbnails 
 
-function IMGsrc(source) {
-    document.getElementById('img-preview').src = source;
-  }
 
-  // ============================================
-// button to go back to the top
-const BtnUp = document.getElementById("BtnUp").innerHTML; 
+//                  working on below now
 
-BtnUp.AddEventListener('click', function() {
-    // when using function in {} instead of =>, to ensure IE compatibility
-window.scrollTo(0, 0); 
-// above 0 means pixels. first - X (left), second - y (top)
-// adding 50 would mean 50px from the top
-})
 
 // ============================================
 
@@ -77,42 +61,33 @@ window.scrollTo(0, 0);
 
 // Content Functions
 funcVideo1 = () => {
-	document.querySelector('#video1').classList.remove('hideItem');
-	document.querySelector('#video2').classList.add('hideItem');
-	document.querySelector('#video3').classList.add('hideItem');
+    document.querySelector('#video1').classList.remove('hideItem');
+    document.querySelector('#video2').classList.add('hideItem');
+    document.querySelector('#video3').classList.add('hideItem');
 };
 
 funcVideo2 = () => {
-	document.querySelector('#video2').classList.remove('hideItem');
-	document.querySelector('#video3').classList.add('hideItem');
-	document.querySelector('#video1').classList.add('hideItem');
+    document.querySelector('#video2').classList.remove('hideItem');
+    document.querySelector('#video3').classList.add('hideItem');
+    document.querySelector('#video1').classList.add('hideItem');
 };
 
 funcVideo3 = () => {
-	document.querySelector('#video3').classList.remove('hideItem');
-	document.querySelector('#video1').classList.add('hideItem');
-	document.querySelector('#video2').classList.add('hideItem');
+    document.querySelector('#video3').classList.remove('hideItem');
+    document.querySelector('#video1').classList.add('hideItem');
+    document.querySelector('#video2').classList.add('hideItem');
 };
 // ============================================
 
 // ============================================
 // Life Cyle Events
 
-document.querySelector('#btn1').addEventListener('click', funcVideo1);
-document.querySelector('#btn2').addEventListener('click', funcVideo2);
+//                  below are giving errors!! 
+// document.querySelector('#btn1').addEventListener('click', funcVideo1);
+// document.querySelector('#btn2').addEventListener('click', funcVideo2);
 
-// ============================================
+// funcVideo1();
 
-funcVideo1();
-
-
-
-
-
-
-//      ADD THE BELOW SO IT DOES NOT REFRESH THE PAGE ON BUTTON CLICK!!!!
-//   e.preventDefault(); 
-  // e is required for the page to not refresh (default behaviour)
 
 
 
@@ -135,5 +110,36 @@ funcVideo1();
 //   }
 
 
-
   // how to set that the on-web open it shows the first video, and then iterates to +1 each time or -1
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // ============================================
+// button to go back to the top - this is causing issues for other buttons! 
+//  it was set up as <a> rather than <button>. For a, the below function is not required as <a> scrolls up anyway.
+// executing the function no matter whether it is clicked
+// innerHTML is used when I want to affect inner HTML or get into it - not relevant to below.
+
+// const BtnUp = document.getElementById("BtnUp"); 
+// BtnUp.AddEventListener('click', function() {
+// //   when using function in {} instead of =>, to ensure IE compatibility
+// window.scrollTo(0, 0); 
+// // above 0 means pixels. first - X (left), second - y (top)
+// // // adding 50 would mean 50px from the top
+// // })
+// =============================================
+
+// learning points: 
+//      ADD THE BELOW to <a> function SO IT WOULDN’T REFRESH THE PAGE ON CLICK!!!! 
+//   e.preventDefault(); 
+  // e is required for the page to not refresh (default behaviour)

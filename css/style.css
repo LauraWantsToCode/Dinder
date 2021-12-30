@@ -128,6 +128,9 @@ margin-top: 5px;
   padding: 10px;
   transition: 0.15s ease-in-out;
   color: red;
+  /* below border and background removes standard <button> border */
+  border: none;
+  background: none;
 }
 
 .icons #superlike{
@@ -136,6 +139,9 @@ margin-top: 5px;
   padding: 10px;
   transition: 0.15s ease-in-out;
   color: rgb(50, 137, 163);
+  /* below border and background removes standard <button> border */
+  border: none;
+  background: none;
 }
 
 
@@ -145,6 +151,9 @@ margin-top: 5px;
   padding: 10px;
   transition: 0.15s ease-in-out;
   color: green;
+  /* below border and background removes standard <button> border */
+  border: none;
+  background: none;
 }
 
 #x:hover {
@@ -287,6 +296,9 @@ width: 28vw;
   color: white; 
   font-size: 2rem;
   /* use rem to resize font-awesome!  */
+  /* below border and background removes standard <button> border */
+  border: none;
+  background: none;
 }
 
 #nextBtn {
@@ -302,6 +314,7 @@ width: 28vw;
 
 
 
+
 .hideItem {
 	display: none;
   z-index: 2;
@@ -311,5 +324,3 @@ width: 28vw;
   z-index: 1;
 }
 
-/* also add resizing depending on your screen size. view on phone too?  */
-/* two languages - LT, EN */

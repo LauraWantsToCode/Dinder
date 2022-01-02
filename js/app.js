@@ -50,74 +50,37 @@ function Hide3() {
     document.getElementById("hovertext2").innerHTML=" ";
 }
 
+// ======================================
+// Video, thumbnails, click for next
 
+var slideIndex = 1;
+showSlides(slideIndex);
 
-//                  working on below now
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-// ============================================
-
-// === below does not work ====
-
-// Content Functions
-funcVideo1 = () => {
-    document.querySelector('#video1').classList.remove('hideItem');
-    document.querySelector('#video2').classList.add('hideItem');
-    document.querySelector('#video3').classList.add('hideItem');
-};
-
-funcVideo2 = () => {
-    document.querySelector('#video2').classList.remove('hideItem');
-    document.querySelector('#video3').classList.add('hideItem');
-    document.querySelector('#video1').classList.add('hideItem');
-};
-
-funcVideo3 = () => {
-    document.querySelector('#video3').classList.remove('hideItem');
-    document.querySelector('#video1').classList.add('hideItem');
-    document.querySelector('#video2').classList.add('hideItem');
-};
-// ============================================
-
-// ============================================
-// Life Cyle Events
-
-//                  below are giving errors!! 
-// document.querySelector('#btn1').addEventListener('click', funcVideo1);
-// document.querySelector('#btn2').addEventListener('click', funcVideo2);
-
-// funcVideo1();
-
-
-
-
-// video_count =1;
-//   videoPlayer = document.getElementsByClassName("slides");
-
-//   function runNext()  //this function must be added for the button 'next'. 
-//                         // create a function for previous with -1
-//   {
-//     runVideo(video_count+1);
-//   }
-
-//   function runVideo(number)
-//   {
-//     if (number > 3) return;  // returns to video_count initial calc - 1? 
-//     video_count = number; // this prints the number once it is clear whether it returns or not?
-//     videoPlayer.src = "video"+video_count+".mp4";
-//     videoPlayer.play();
-    
-//   }
-
-
-  // how to set that the on-web open it shows the first video, and then iterates to +1 each time or -1
-
-
-
-
-
-
-
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var thumbnail = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < thumbnail.length; i++) {
+    thumbnail[i].className = thumbnail[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  thumbnail[slideIndex-1].className += " active";
+  }
 
 
 

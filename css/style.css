@@ -117,7 +117,7 @@ i {
 }
 
 .icons {
-font-size: 1.5rem;
+/* font-size: 1.5rem; */
 float: left;
 margin-top: 5px;
 }
@@ -276,51 +276,73 @@ width: 28vw;
 /* overflow hidden - hides any items that are flexed (display:flex) and move out of the added size */
 }
 
-.slides { 
-  /* display: none; */
-  z-index: 9;
+/* Hide the images by default */
+.mySlides {
+  display: none;
   /* display: flex;  */
   /* display flex put all images next to each other, so from left to right, all in one line
    - would work great for a carousel */
    /* position: relative; */
 }
 
-#prevBtn, 
-#nextBtn {
-  z-index: 10;
+/* Next & previous buttons */
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
-  transform: translateY(7vw);
-  color: white; 
-  font-size: 2rem;
-  /* use rem to resize font-awesome!  */
-  /* below border and background removes standard <button> border */
-  border: none;
-  background: none;
 }
 
-#nextBtn {
-  right: 2vw;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-#prevBtn:hover, 
-#nextBtn:hover {
-  background-color: rgba(66, 65, 65, 0.8);
-  /* above adds gray with a bit of seethrough */
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-
-
-
-.hideItem {
-	display: none;
-  z-index: 2;
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-#video0 {
-  z-index: 1;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
+
+/* 3 columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
 

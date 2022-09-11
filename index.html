@@ -40,7 +40,7 @@
     <!-- to put all 3 hover texts into one line, it is easier to put all into 1 div -->
     <!-- i needed different colours for the hover text so had to split -->
   <div id="hovertext" ></div>
-  <div id="hovertext2" ></div> </div>
+  </div>
   
 <span class="icons">
   <!-- initially used <a> instead of buttons. a has href="" included in it, so refreshes the page -->
@@ -101,17 +101,17 @@ Please meet me and give me snacks! <br><br>
    <!-- decide if I want the video to autoplay or not - remove "autoplay" if not -->
    <!-- same with controls - just add this word for it (fastforward, stop, etc) -->
     <div class="numbertext">1 / 3</div>
-    <video src="./Photo/Video/video1.mp4" controls muted style="width: 28vw;"></video>
+    <video src="./Photo/Video/video1.mp4" controls muted id="video1"></video>
   </div>
 
   <div class="mySlides">
     <div class="numbertext">2 / 3</div>
-    <video src="./Photo/Video/video2.mp4" controls muted style="width: 28vw;"></video>
+    <video src="./Photo/Video/video2.mp4" controls muted id="video2"></video>
   </div>
 
   <div class="mySlides">
     <div class="numbertext">3 / 3</div>
-    <video src="./Photo/Video/Video3.mp4" controls muted style="width: 28vw;"></video>
+    <video src="./Photo/Video/Video3.mp4" controls muted id="video3" ></video>
   </div> 
 
  <!-- Next and previous buttons -->
@@ -146,11 +146,13 @@ Please meet me and give me snacks! <br><br>
   </div>
 </div>
 
-</main>
 <nav>
   <a href="#" id="BtnUp"> <i class="fas fa-arrow-alt-circle-up"></i></a>
   <!-- a href above scrolls to top, so a button and function is not required. -->
 </nav>
+
+</main>
+
 
    <script src="./js/app.js"></script>
   </body>

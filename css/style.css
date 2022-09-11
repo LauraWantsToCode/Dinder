@@ -3,7 +3,6 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
-
 }
 
 body {
@@ -48,19 +47,18 @@ body {
   */
 
 
-body main {
-  width: 80vw;
-}
+/* body main {
+  width: 100vw;
+} */
 
 .profile {
   background-color: white;
   border: 1px solid lightgray;
   display: inline-block;
-  max-width: 30vw;
+  /* max-width: 30vw; */
   border-radius: 15px;
   min-height: 95vh;
   margin-top: 1vw;
-  margin-left: 33vw;
   box-shadow: 5px 10px 18px black;
   transition: 0.15s ease-in-out;
   padding: 10px 0px;
@@ -69,6 +67,7 @@ body main {
 .profile:hover {
   transform: scale(1.02);
   box-shadow: 5px 10px 18px rgb(47, 0, 255);
+
 }
 
 
@@ -159,16 +158,19 @@ margin-top: 5px;
 #x:hover {
   box-shadow: 5px 10px 18px #888888;
   color: gray;
+  cursor: pointer;
 }
 
 #superlike:hover {
   box-shadow: 5px 10px 18px #888888;
   color: rgb(67, 209, 252);
+  cursor: pointer;
 }
 
 #heart:hover {
   box-shadow: 5px 10px 18px #888888;
   color: rgb(21, 243, 21);
+  cursor: pointer;
 }
 
 .hovert {
@@ -181,38 +183,27 @@ margin-top: 5px;
 
 #hovertext {
   height: 5vh; 
-  width: 8vw; 
+  width: 40vw; 
   padding: 5px;
-  margin-left: 0;
-  font-size: 18px;
+  font-size: 16px;
+  margin-left: 3%;
   text-align: left;
   color: red;
   }
 
-  #hovertext2 {
-    height: 5vh; 
-    width: 30vw; 
-    padding: 5px;
-    margin-right: 0;
-    font-size: 18px;
-    text-align: left;
-    color: blue;
-    position: sticky;
-    }
 
 #calculation {
   height: 5vh;
   width: 4.5vw;
   font-size: 14px; 
   float: right;
-  margin-right: 5vw;
   color: rgb(100, 100, 177);
 }
 
     
 /* below is from YouTube #Onclick Image Preview _ Simple Image Slider using Javascript _ 2021 tutorial. */
 .img-preview {
- width: 28vw;
+ width: 94%;
   margin: 1vw; 
   align-items: center;
 }
@@ -244,13 +235,14 @@ margin-top: 5px;
 }
 
 
-body nav {
-  width: 17vw;
-  cursor: url('../Photo/cursor.png'), auto;	
+/* body nav {
+  
+  /* cursor: url('../Photo/cursor.png'), auto;	 */
+
     /* need to use two . to link to my folder */
     /* used online pic converter jpg to png transparent */
-    /* then used some png resizer to make it tiny (didn't work without!) */
-  }
+    /* then used some png resizer to make it tiny (didn't work without!) 
+  } */
 
 #BtnUp {
 
@@ -284,6 +276,7 @@ width: 28vw;
    - would work great for a carousel */
    /* position: relative; */
 }
+
 
 /* Next & previous buttons */
 .prev,
@@ -343,6 +336,104 @@ width: 28vw;
 .active,
 .demo:hover {
   opacity: 1;
+}
+
+
+@media screen and (min-width:1001px){
+
+  .profile {
+    max-width: 30vw;
+    margin-left: 33vw;
+ }
+
+ #calculation {
+  margin-right: 5vw;
+}
+
+.img {
+  width: 2vw;
+  margin: 5px;
+}
+
+#video1,
+#video2,
+#video3 {
+  width: 28vw;
+}
+
+}
+
+
+@media screen and (min-width:735px) and (max-width:1000px){
+
+  .profile {
+    max-width: 40vw;
+    margin-left: 30vw;
+ }
+ #calculation {
+  margin-right: 5.5vw;
+}
+
+.img {
+  width: 3vw;
+  margin: 3px;
+}
+
+#video1,
+#video2,
+#video3 {
+  width: 38vw;
+}
+
+}
+
+@media screen and (min-width:551px) and (max-width:734px) {
+
+  .profile {
+    max-width: 60vw;
+    margin-left: 20vw;
+ }
+ #calculation {
+  margin-right: 15vw;
+}
+
+.img {
+  width: 4vw;
+  margin: 3px;
+}
+
+#video1,
+#video2,
+#video3 {
+  width: 58vw;
+}
+
+}
+
+@media screen and (min-width:400px) and (max-width:550px) {
+
+  .profile {
+    max-width: 80vw;
+    margin-left: 10vw;
+ }
+
+ #BtnUp {
+  visibility: hidden;
+}
+
+#calculation {
+  margin-right: 15vw;
+}
+.img {
+  width: 6vw;
+  margin: 3px;
+}
+
+#video1,
+#video2,
+#video3 {
+  width: 78vw;
+}
 }
 
 

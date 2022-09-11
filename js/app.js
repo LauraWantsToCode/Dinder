@@ -37,17 +37,17 @@ function Hide1() {
 }
 
 function Show2() {
-    document.getElementById("hovertext2").innerHTML="You SUPER-like me? I Super-like you too!";
+    document.getElementById("hovertext").innerHTML="You SUPER-like me? I Super-like you too!";
 }
 function Hide2() {
-    document.getElementById("hovertext2").innerHTML=" ";
+    document.getElementById("hovertext").innerHTML=" ";
 }
 
 function Show3() {
-    document.getElementById("hovertext2").innerHTML="Awwwww, I <3 you too!";
+    document.getElementById("hovertext").innerHTML="Awwwww, I <3 you too!";
 }
 function Hide3() {
-    document.getElementById("hovertext2").innerHTML=" ";
+    document.getElementById("hovertext").innerHTML=" ";
 }
 
 // ======================================

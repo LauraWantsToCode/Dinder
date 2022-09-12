@@ -410,7 +410,7 @@ width: 28vw;
 
 }
 
-@media screen and (min-width:400px) and (max-width:550px) {
+@media screen and (min-width:361px) and (max-width:550px) {
 
   .profile {
     max-width: 80vw;
@@ -422,7 +422,7 @@ width: 28vw;
 }
 
 #calculation {
-  margin-right: 15vw;
+  margin-right: 17vw;
 }
 .img {
   width: 6vw;
@@ -437,3 +437,29 @@ width: 28vw;
 }
 
 
+@media screen and (min-width:250px) and (max-width:360px) {
+
+  .profile {
+    max-width: 80vw;
+    margin-left: 10vw;
+ }
+
+ #BtnUp {
+  visibility: hidden;
+}
+
+#calculation {
+  width: 100%;
+  margin-bottom: 15%;
+}
+.img {
+  width: 6vw;
+  margin: 3px;
+}
+
+#video1,
+#video2,
+#video3 {
+  width: 78vw;
+}
+}
